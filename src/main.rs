@@ -6,6 +6,8 @@ fn hello_world() {
 
 fn main() {
     App::build()
+        //converts hello_world func into system type
+        //add_system func adds system to apps schedule
         .add_system(hello_world.system())
         .run();
 }
