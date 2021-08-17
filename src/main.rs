@@ -12,4 +12,4 @@ fn print_position_system(query: Query<&Transform>) {
     }
 }
 
-struct Entity {u64};
+struct Entity(u64);
