@@ -35,6 +35,26 @@ impl Plugin for MyPlugin {
 // }
 
 
+struct MyEvent;
+
+fn sender(mut writer: EventWriter<MyEvent>) {
+    writer.send(MyEvent);
+}
+
+fn receiver(mut reader: EventReader<MyEvent>) {
+    for event in reader.iter() {
+        // handle event
+    }
+}
+
+fn main_event() {
+    App::build()
+        .add_event::<MyEvent>()
+        // ...
+        .run();
+}
+
+
 fn app_builder() {
     // labels for custom stages:
     static DEBUG: &str = "debug";
