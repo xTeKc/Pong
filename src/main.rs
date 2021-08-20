@@ -15,6 +15,14 @@ fn app_builder() {
    static DEBUG: &str = "debug";
    static MY_START: &str = "my_start";
 
+   struct MyPlugin;
+
+impl Plugin for MyPlugin {
+    fn build(&self, app: &mut AppBuilder) {
+        // use `app` builder
+    }
+}
+
    App::build()
        // bevy
        .add_plugins(DefaultPlugins)
