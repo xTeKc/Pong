@@ -10,7 +10,7 @@ fn hello_world_system() {
    println!("hello world");
 }
 
-fn main() {
+fn app_builder() {
    // labels for custom stages:
    static DEBUG: &str = "debug";
    static MY_START: &str = "my_start";
