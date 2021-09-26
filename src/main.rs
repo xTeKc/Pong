@@ -35,6 +35,8 @@ impl App {
         let right_position = self.right_position as f64;
 
         let ball = rectangle::square(0.0, 0.0, 10.0);
+        let ball_x = self.ball_x as f64;
+        let ball_y = self.ball_y as f64;
     }
 }
 
