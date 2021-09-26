@@ -4,7 +4,8 @@ use piston::event_loop::{EventSettings, Events};
 use piston::input::{Button, Key, PressEvent, ReleaseEvent,
 RenderArgs, RenderEvent, UpdateArgs, UpdateEvent};
 use glutin_window::GlutinWindow;
-use opengl_graphics::{Glgraphics, OpenGL};
+use opengl_graphics::OpenGL;
+use opengl_graphics::GlGraphics;
 
 
 pub struct App {
