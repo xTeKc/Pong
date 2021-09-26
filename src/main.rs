@@ -28,6 +28,9 @@ impl App {
 
         const BACKGROUND: [f32; 4] = [0.0, 0.5, 0.5, 1.0];
         const FOREGROUND: [f32; 4] = [0.0, 0.0, 1.0, 1.0];
+
+        let left = rectangle::square(0.0, 0.0, 50.0);
+        let left_position = self.left_position as f64;
     }
 }
 
