@@ -37,6 +37,11 @@ impl App {
         let ball = rectangle::square(0.0, 0.0, 10.0);
         let ball_x = self.ball_x as f64;
         let ball_y = self.ball_y as f64;
+
+        self.gl.draw(args.viewport(), |c, gl| {
+            clear(BACKGROUND, gl);
+            rectangle(FOREGROUND, left, c.transform.trans(-40.0, left_position), gl);
+        })
     }
 }
 
