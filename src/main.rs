@@ -145,14 +145,14 @@ fn main() {
     let mut app = App {
         gl: GlGraphics::new(opengl),
         left_score: 0,
-        left_pos: 1,
-        left_vel: 0,
+        left_position: 1,
+        left_velocity: 0,
         right_score: 0,
-        right_pos: 1,
-        right_vel: 0,
+        right_position: 1,
+        right_velocity: 0,
         ball_x: 0,
         ball_y: 0,
-        vel_x: 1,
-        vel_y: 1,
+        velocity_x: 1,
+        velocity_y: 1,
 };
 
