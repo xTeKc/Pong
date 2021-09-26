@@ -156,3 +156,22 @@ fn main() {
         velocity_y: 1,
 };
 
+let mut events = Events::new(EventSettings::new());
+while let Some(e) = events.next(&mut window) {
+    if let Some(r) = e.render_args() {
+        app.render(&r);
+    }
+
+    if let Some(u) = e.update_args() {
+        app.update(&u);
+    }
+
+    if let Some(b) = e.press_args() {
+        app.press(&b);
+    }
+
+    if let Some(b) = e.release_args() {
+        app.release(&b);
+    }
+}
+}
