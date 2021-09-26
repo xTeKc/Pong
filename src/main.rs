@@ -22,6 +22,13 @@ pub struct App {
 }
 
 
+impl App {
+    fn render(&mut self, args: &RenderArgs) {
+        use graphics::*;
+    }
+}
+
+
 fn main() {
     
 }
