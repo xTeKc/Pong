@@ -31,6 +31,8 @@ impl App {
 
         let left = rectangle::square(0.0, 0.0, 50.0);
         let left_position = self.left_position as f64;
+        let right = rectangle::square(0.0, 0.0, 50.0);
+        let right_position = self.right_position as f64;
     }
 }
 
