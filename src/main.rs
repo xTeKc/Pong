@@ -41,6 +41,9 @@ impl App {
         self.gl.draw(args.viewport(), |c, gl| {
             clear(BACKGROUND, gl);
             rectangle(FOREGROUND, left, c.transform.trans(-40.0, left_position), gl);
+            rectangle(FOREGROUND, right, c.transform.trans(
+                args.width as f64 - 10.0, right_position), gl);
+            rectangle(FOREGROUND, ball, c.transform.trans(ball_x, ball_y), gl);
         })
     }
 }
