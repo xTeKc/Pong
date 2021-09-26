@@ -85,7 +85,7 @@ impl App {
             }
         }
 
-        self.ball_y += self.vel_y;
+        self.ball_y += self.velocity_y;
         if self.ball_y > 332 || self.ball_y < 1 {
             self.velocity_y = -self.velocity_y;
         }
