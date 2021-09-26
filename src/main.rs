@@ -91,6 +91,26 @@ impl App {
         }
     }
 
+    fn press(&mut self, args: &Button) {
+        if let &Button::Keyboard(key) = args {
+            match key {
+                Key::Up => {
+                    self.right_velocity = -1;
+                }
+                Key::Down => {
+                    self.right_velocity = 1;
+                }
+                Key::W => {
+                    self.left_velocity = -1;
+                }
+                Key::S => {
+                    self.left_velocity = 1;
+                }
+                _ => {}
+            }
+        }
+    }
+
 }
 
 
