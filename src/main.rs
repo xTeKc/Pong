@@ -44,8 +44,53 @@ impl App {
             rectangle(FOREGROUND, right, c.transform.trans(
                 args.width as f64 - 10.0, right_position), gl);
             rectangle(FOREGROUND, ball, c.transform.trans(ball_x, ball_y), gl);
-        })
+        });
     }
+
+
+    fn update(&mut self, _args: &UpdateArgs) {
+        if (self.left_velocity == 1 && self.left_position < 291)
+            || (self.left_velocity == -1 && self.left_position >= 1)
+        {
+            self.left_position += self.left_velocity;
+        }
+        if (self.right_velocity == 1 && self.right_position < 291)
+            || (self.right_velocity == -1 && self.right_position >= 1)
+        {
+            self.right_position += self.right_velocity;
+        }
+        self.ball_x += self.velocity_x;
+        if self.ball_x > 502 {
+            self.velocity_x = -self.velocity_x;
+            if self.ball_y < self.right_position || self.ball_y > self.right_position + 50 {
+                self.left_score += 1;
+                if self.left_score >= 5 {
+                    println!("Left wins!");
+                    process::exit(0);
+                }
+                self.ball_x = 256;
+                self.ball_y = 171;
+            }
+        }
+        if self.ball_x < 1 {
+            self.velocity_x = -self.velocity_x;
+            if self.ball_y < self.left_position || self.ball_y > self.left_position + 50 {
+                self.right_score += 1;
+                if self.right_score >= 5 {
+                    println!("Right wins!");
+                    process::exit(0);
+                }
+                self.ball_x = 256;
+                self.ball_y = 171;
+            }
+        }
+
+        self.ball_y += self.vel_y;
+        if self.ball_y > 332 || self.ball_y < 1 {
+            self.velocity_y = -self.velocity_y;
+        }
+    }
+
 }
 
 
