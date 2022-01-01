@@ -27,7 +27,7 @@ impl App {
     fn render(&mut self, args: &RenderArgs) {
         use graphics::*;
 
-        const BACKGROUND: [f32; 4] = [0.0, 0.5, 0.0, 1.0];
+        const BACKGROUND: [f32; 4] = [0.0, 0.0, 0.0, 0.0];
         const FOREGROUND: [f32; 4] = [1.0, 0.0, 0.0, 1.0];
 
         let left = rectangle::square(0.0, 0.0, 50.0);
